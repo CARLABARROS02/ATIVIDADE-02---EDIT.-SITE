@@ -14,19 +14,19 @@ const ServicePage = () => {
                         icon={<FaXRay />}
                         text="Raio-X"
                         buttonLink="/raio-x"
-                        buttonText={<a href="https://wa.me/5511991407988"> Ver Mais </a>}
+                        buttonText={<a href="https://sites.google.com/view/raioxservico/in%C3%ADcio"> Ver Mais </a>}
                     />
                 <Card
                         icon={<FaBriefcaseMedical />}
                         text="Fármarcia"
                         buttonLink="/farmacia"
-                        buttonText={<a href="https://wa.me/5511991407988"> Ver Mais </a>}
+                        buttonText={<a href="https://sites.google.com/view/farmaciaservicos/in%C3%ADcio"> Ver Mais </a>}
                     />
                 <Card
                         icon={<FaDog />}
                         text="Clínica Veterinária"
                         buttonLink="/clinica-vet"
-                        buttonText={<a href="https://wa.me/5511991407988"> Ver Mais </a>}
+                        buttonText={<a href="https://sites.google.com/view/clinicapetshop/in%C3%ADcio"> Ver Mais </a>}
                     />
 
                 </div>
