@@ -1,0 +1,71 @@
+@import "../variables.scss";
+
+.titulo {
+    text-align: center;
+    color: $primary-color;
+    font-size: 2.5rem;
+}
+
+.container {
+    margin-top: 5%;
+    width: 100%;
+    background-color: $primary-color;
+    padding: 30px 0px;
+
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; // Centraliza os cards
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: $primary-color;
+    }
+}
+
+.card {
+    flex: 1 1 250px; // O card ocupa pelo menos 250px de largura e se adapta ao espaço disponível
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    .icon {
+        font-size: 2rem;
+        color: #631b1b;
+        margin-bottom: 15px;
+    }
+
+    .text {
+        font-size: 1rem;
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        color: white;
+        background-color: #d4a017; // Cor secundária
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: darken(#d4a017, 10%);
+        }
+    }
+}

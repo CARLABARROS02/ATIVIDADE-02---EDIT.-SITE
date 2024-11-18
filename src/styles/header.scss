@@ -1,0 +1,119 @@
+@import "./variables.scss";
+
+.header {
+    color: $primary-color;
+    background-color: rgb(245, 249, 249);
+    width: 99%;
+
+    .header-container {
+        // background-color: red;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+    }
+
+    .logo {
+        img {
+            width: 70px;
+        }
+    }
+
+    .nav {
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin: 0 15px;
+
+                a {
+                    text-decoration: none;
+                    padding: 5px 10px;
+                    border-radius: 4px;
+                    transition: background-color 0.3s;
+                    font-size: 1.3rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        z-index: 2; // Certificando-se de que o hamburger esteja acima do menu
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: $primary-color;
+            transition: all 0.3s ease;
+        }
+
+        &.active {
+            .bar:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px); // Primeira barra vira
+            }
+
+            .bar:nth-child(2) {
+                opacity: 0; // Segunda barra desaparece
+            }
+
+            .bar:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px); // Terceira barra vira
+            }
+        }
+    }
+
+    // Responsividade: esconde o menu e exibe o ícone do hamburger
+    @media (max-width: 768px) {
+        .nav {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+            height: 150px;
+            z-index: 4;
+            opacity: 0; // Inicialmente invisível
+            pointer-events: none; // Impede a interação com os links quando estiver invisível
+            transition: opacity 0.3s ease; // Transição suave para aparecer/desaparecer
+            box-shadow: 0px 4px 5px rgb(71, 71, 71);
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                li {
+                    margin: 10px 0;
+                }
+
+                li a {
+                    padding: 15px;
+                    font-size: 18px;
+                    color: rgb(0, 0, 0);
+                }
+            }
+
+            &.active {
+                opacity: 1; // Torna o menu visível
+                pointer-events: all; // Habilita a interação com os links quando o menu está visível
+            }
+        }
+
+        .hamburger {
+            display: block;
+        }
+    }
+}

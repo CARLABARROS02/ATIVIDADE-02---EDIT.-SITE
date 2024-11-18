@@ -1,0 +1,131 @@
+// Footer.scss
+@import "./variables.scss";
+
+.footer {
+    background-color: $primary-color;
+    color: $on-primary;
+    padding: 80px 0;
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+            gap: 40px;
+            width: 300px;
+
+            margin: auto;
+        }
+    }
+
+    .rocket_text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-partner {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+
+        .footer-icon {
+            font-size: 34px;
+            margin: 10px;
+            margin-bottom: 8px;
+        }
+
+        .footer-partner-text {
+            text-align: center;
+            font-size: 1.3rem;
+
+            .text1 {
+                font-size: 1rem;
+            }
+
+            .text2 {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+            p {
+                margin: 0;
+                line-height: 1.2;
+            }
+        }
+
+        .footer-links {
+            margin-top: 16px;
+            display: flex;
+            gap: 20px;
+
+            a {
+                color: $on-primary;
+                font-size: 1.2rem;
+                text-decoration: none;
+                transition: color 0.3s;
+                cursor: pointer;
+
+                &:hover {
+                    color: lighten($on-primary, 10%);
+                }
+            }
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                gap: 10px;
+                // background-color: blue;
+                position: relative;
+                width: 100%;
+            }
+        }
+    }
+
+    .footer-divider {
+        height: 100px;
+        width: 7px;
+        background-color: $on-primary;
+        margin-left: 10%;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .footer-clinic {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        padding: 20px 0px;
+        width: 300px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        .footer-logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 8px;
+        }
+
+        .footer-clinic-text {
+            font-size: 14px;
+            color: $primary-color;
+        }
+
+        @media (max-width: 768px) {
+            padding: 20px;
+            width: 100%;
+            margin-left: -10%;
+            width: 250px;
+            margin: auto;
+        }
+    }
+}

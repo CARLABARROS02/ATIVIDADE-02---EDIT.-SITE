@@ -1,0 +1,29 @@
+//IREI ALTERAR TODAS AS CORES VERMELHA, PARA AZUL - AJUSTAR A IDENTIDADE VISUAL DE ACORDO COM A LOGOTIPO.
+
+// Base color
+$primary-color: #17115b;
+$secondary-color: #00a0a0;
+$on-primary:white;
+// Lighter shades
+$primary-lightest: #f0dada;
+$primary-lighter: #d9a3a3;
+$primary-light: #b66b6b;
+
+// Darker shades
+$primary-dark: #14164d;
+$primary-darker: #0e3038;
+$primary-darkest: #0e0326;
+
+// Accent colors (variantes para botões ou detalhes)
+$accent-light: #4478a9;
+$accent-dark: #1e617e;
+
+// Neutrals (para contrastes e equilíbrio)
+$neutral-light: #f4f4f4; // Usado para fundos e áreas de respiro
+$neutral-medium: #d6d8d5; // Usado para bordas e divisores
+$neutral-dark: #3a3a3a; // Para texto escuro em fundos claros
+
+// Opacity variations
+$primary-opacity-80: rgba($primary-color, 0.8);
+$primary-opacity-60: rgba($primary-color, 0.6);
+$primary-opacity-40: rgba($primary-color, 0.4);

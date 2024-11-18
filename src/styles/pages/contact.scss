@@ -1,0 +1,28 @@
+@import "../variables.scss";
+
+.titulo_contato {
+    text-align: center;
+    color: $primary-color;
+    font-size: 2.5rem;
+}
+
+.contact-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // 2 colunas para telas grandes
+    gap: 20px;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    justify-items: center; // Centraliza cada card no container
+
+
+    a {
+        // background-color: red;
+        color: $on-primary;
+        text-decoration: none;
+    }
+
+    @media (max-width: 868px) {
+        grid-template-columns: 1fr; // 1 coluna para telas menores
+    }
+}

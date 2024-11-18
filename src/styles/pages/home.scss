@@ -1,0 +1,115 @@
+@import "../variables.scss";
+
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    background: linear-gradient(to bottom,
+            $primary-color 70%,
+
+            rgb(255, 255, 255) 20%); // Cor de fundo ajustável
+    // Para o efeito de "vazado" ficar visível com mais espaço acima
+}
+
+.home-container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    height: 600px; // Ajuste a altura conforme necessário
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(3, 3, 3, 0.473);
+    overflow: hidden;
+    position: relative; // Para permitir o efeito "vazado"
+    background-color: white; // Garantindo que o fundo fique branco
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 10px; // Pequeno deslocamento para baixo, criando o efeito vazado
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #f4f4f4; // Cor do fundo que vazará (pode ser alterada)
+        z-index: -1; // Fica atrás do conteúdo
+    }
+}
+
+.image-container {
+    flex: 0 0 60%;
+    background-color: #ccc; // Cor de fundo enquanto a imagem não for carregada
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+
+    .logo {
+        width: 120px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #666;
+        text-align: center;
+    }
+
+
+}
+
+// Responsividade
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+        height: 500px;
+    }
+
+    .image-container {
+
+        display: none;
+    }
+
+    .content-container {
+        height: 500px;
+    }
+
+    .logo {
+        width: 200px; // Reduzindo o tamanho do logo
+    }
+
+    h2 {
+        font-size: 1.4rem;
+
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+
+}
